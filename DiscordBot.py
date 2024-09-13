@@ -22,10 +22,14 @@ async def on_message(message):
 
     print(f"Received message: {message.content}")
 
-    if message.content.lower().startswith('?check'):
-        await message.channel.send('On\n ID: ' + str(client.user.id))
+    if message.content.lower().startswith('?help'):
+        await message.channel.send("?ping -> Retorna o Ping do Bot\n?reaction -> Adiciona uma reação a sua mensagem\n?request (pergunta) retorna o Response da IA")
 
-    if message.content.lower().startswith('?test'):
+    if message.content.lower().startswith('?ping'):
+        ping = round(client.latency * 1000) #converte o ping para milissegunds
+        await message.channel.send('On ✅\n Ping: ' + str(ping) + ' Milisegundos')
+
+    if message.content.lower().startswith('?reaction'):
         await message.add_reaction('😴')
         print("Reaction added")
 
