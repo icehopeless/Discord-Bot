@@ -10,9 +10,9 @@ client = discord.Client(intents=intents)
 
 def format_response(response):
     embed = discord.Embed(
-        description=response.text,  # Resposta da API  # Cor do embed
+        description=response.text,  # Resposta da API 
     )
-    embed.set_footer(text="Gerado por Google Gemini API")
+    embed.set_footer(text="Gerado por Google Gemini API") # rodape
     return embed
 
 #funcao quando tiver online
