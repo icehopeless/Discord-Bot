@@ -1,7 +1,7 @@
 import discord 
 import asyncio
 import google.generativeai as genai
-genai.configure(api_key='AIzaSyAmIDXpyneAYEi53bt46yLngzvzg6glcvU')
+genai.configure(api_key='')
 
 intents = discord.Intents.default()
 intents.message_content = True  # Para ler o conteúdo das mensagens
@@ -56,4 +56,4 @@ async def on_message(message):
         
 
 
-client.run('MTI4MzQ3OTQyNDY4NzI3NjA3Mw.GGTJXZ.8bU8OWpODjyeGSwU9sBGKvWGzft0FaSMaR_a60') #token here
+client.run('') #token here
